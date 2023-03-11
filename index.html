@@ -16,34 +16,30 @@
             </div>
         </div>
     </nav>
-
+    <br>
     <!--Tags for login and logout button-->
     <section>
         <div class="container">
-            <!--Text on top of buttons-->
-            <p>Log in With Google</p>
-            <!--Button Tags-->
-            <button class="btn-red" id="authorize-button">Log In</button>
-            <button class="btn-red" id="authorize-button">Log In</button>
+            <p>Log In With Google</p>
+            <button class="btn red" id="authorize-button">Log In</button>
+            <button class="btn red" id="signout-button">Log Out</button>
             <br>
-            <!--Tags for form and submit button-->
             <div id="content">
                 <div class="row">
-                    <!--Forms-->
                     <div class="col s6">
                         <form id="channel-form">
                             <div class="input-field col s6">
                                 <input type="text" placeholder="Enter Channel Name" id="channel-input">
-                                <input type="submit" value="Get Channel Data" id="channel-input" class="grey light-2">
+                                <input type="submit" placeholder="Get Channel Data" class="btn grey lighten-2">
                             </div>
                         </form>
                     </div>
-                    <!--Tag for Video area-->
-                    <div class="row" id="video-container"></div>
+                    <div class="col s6" id="channel-data"></div>
                 </div>
-            </div>       
+                <div class="row" id="video-container"></div>
+            </div>
         </div>
-    </section>  
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      
 </body>
