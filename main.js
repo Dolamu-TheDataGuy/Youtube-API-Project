@@ -9,6 +9,8 @@ const channelForm = document.getElementById('channel-form');
 const channelInput = document.getElementById('channel-input');
 const videoContainer = document.getElementById('video-container');
 
+const defaultChannel = 'Python engineer'
+
 // Load auth2 library
 function handleClientLoad() {
     gapi.load('client:auth2', initClient);
@@ -39,6 +41,7 @@ function updateSigninStatus(isSignedIn) {
         signoutButton.style.display = 'block';
         content.style.display = 'block';
         videoContainer.style.display = 'block';
+        getChannel(defaultChannel);
 
     } else {
         // show login button
@@ -57,4 +60,9 @@ function handleAuthClick() {
 // Handle logout
 function handleSignoutClick() {
     gapi.auth2.getAuthInstance().signOut()
+}
+
+// Get channel from API
+function getChannel(channel) {
+    console.log(channel);
 }
