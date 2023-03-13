@@ -47,5 +47,14 @@ function updateSigninStatus(isSignedIn) {
         content.style.display = 'none';
         videoContainer.style.display = 'none';
     }
+}
 
+// Handle login
+function handleAuthClick() {
+    gapi.auth2.getAuthInstance().signIn()
+}
+
+// Handle logout
+function handleSignoutClick() {
+    gapi.auth2.getAuthInstance().signOut()
 }
